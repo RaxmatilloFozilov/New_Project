@@ -24,11 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # load_detenv()
 #
 #
-# SECRET_KEY -getenv("SECRET_KEY")
 
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
+
+# SECRET_KEY =getenv("SECRET_KEY")
 SECRET_KEY = 'django-insecure-lgiyh2-426b-**9*$@8+!rk841sdo3r$$nk=e5folbk)t!2tyn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
