@@ -2,6 +2,7 @@ from django.contrib.auth import get_user_model
 from django.db import models
 
 
+
 # Create your models here.
 class Category(models.Model):
     category_name = models.CharField(max_length=255)
@@ -29,3 +30,22 @@ class News(models.Model):
     class Meta:
         verbose_name_plural = "News"
         db_table = 'news'
+
+
+class Xabar(models.Model):
+    mavzu = models.CharField(max_length=200)
+    matn = models.TextField()
+
+
+# class CustomUser(AbstractUser):
+#     global Entite1
+#     username = None
+#     email = models.EmailField()
+#     profil = models.CharField(max_length=10, unique=True)
+#     is_profil_verified = models.BooleanField(default=False)
+#     Entite1 = models.ForeignKey(Entite1, on_delete=models.CASCADE, related_name='entite', blank=True, null=True)
+#
+#     objects = UserManager()
+#
+#     USERNAME_FIELD = 'profil'
+#     REQUIRED_FIELDS = []

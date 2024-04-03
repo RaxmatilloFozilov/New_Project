@@ -35,12 +35,14 @@
                   <hr>
                 <li><a class="dropdown-item" href="{% url 'add_news' %}">Add news</a></li>
                 
-                  <li><a class="dropdown-item" href="{% url 'update_news'  %}">Update</a></li>
-                  
-                  <li><a class="dropdown-item" href="{% url 'update_news'  %}">Delete</a></li>
+{#                  <li><a class="dropdown-item" href="{% url 'update_news'  %}">Update</a></li>#}
+{##}
+{#                  <li><a class="dropdown-item" href="{% url 'update_news'  %}">Delete</a></li>#}
 
 
 {#                    <li><a class="dropdown-item" href={% url 'basic_app:update' pk=school_details.pk %} >Update</a></li>#}
+                  <li><a class="dropdown-item" href="{% url 'message_form' %}">Message form</a></li>
+
               </ul>
             </li>
 
@@ -48,23 +50,7 @@
     </div>
   </div>
 </nav>
-    {% comment %}{% if user.is_authenticated %}
-    	<div class="dropdown" style="text-align: right;">
-          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-            {{ user.username }}
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{% url 'mail' %}">Check mail</a></li>
-              <hr>
-            <li><a class="dropdown-item" href="{% url 'password_change' %}">Password change</a></li>
-            <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
-          </ul>
-        </div>
-    {% else %}
-{#        <a href="{% url 'login' %}" class="btn btn-success">Login</a> |#}
-{#        <a href="{% url 'register' %}" class="btn btn-success">Register</a> |#}
-        <a href="{% url 'password_reset' %}" class="btn btn-danger">Forgot password</a>
-    {% endif %}{% endcomment %}
+  
     {% block content %}
     	
     {% endblock %}
