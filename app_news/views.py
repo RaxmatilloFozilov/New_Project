@@ -71,12 +71,12 @@ class MessageFormView(LoginRequiredMixin, FormView):
             send_mail(subject, message, sender_email, recipients, fail_silently=False)
             messages.success(self.request, 'Message sent successfully.')
         except Exception as e:
-            messages.error(self.request, f'<h1>Error occurred: {e}</h1>')
+            messages.error(self.request, f'Xabar yuborishda xatolik yuzaga keldi: {e}')
         return super().form_valid(form)
 
 
 class CustomView(LoginRequiredMixin, TemplateView):
-    template_name = 'custom_template.html'
+    template_name = 'news/custom_template.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

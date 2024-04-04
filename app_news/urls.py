@@ -1,6 +1,6 @@
 from django.urls import path
 
-from app_news.views import AddNewsView, ListNewsView, DetailNewsView, DeleteNewsView, UpdateNewsView , MessageFormView
+from app_news.views import AddNewsView, ListNewsView, DetailNewsView, DeleteNewsView, UpdateNewsView , MessageFormView , CustomView
 
 urlpatterns = [
     path('add/', AddNewsView.as_view(), name='add_news'),
@@ -10,5 +10,5 @@ urlpatterns = [
     path('delete/<int:pk>/', DeleteNewsView.as_view(), name='delete_news'),
 
     path('message/', MessageFormView.as_view(), name='message_form'),
-
+    path('custom/', CustomView.as_view(), name='custom_view'),
 ]

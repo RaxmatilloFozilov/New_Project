@@ -11,4 +11,11 @@
         {{ news.news_content }}
     </p>
     <p>Author: {{ news.news_author }}</p>
+    {% if user.is_authenticated %}
+        <p>
+            <a href={% url  "update_news" news.pk %}class="btn btn-success"></a>
+         </p>
+    
+    {% endif %}
+    
 {% endblock %}

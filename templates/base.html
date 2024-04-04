@@ -42,6 +42,7 @@
 
 {#                    <li><a class="dropdown-item" href={% url 'basic_app:update' pk=school_details.pk %} >Update</a></li>#}
                   <li><a class="dropdown-item" href="{% url 'message_form' %}">Message form</a></li>
+                  <li><a class="dropdown-item" href="{% url 'custom_view' %}">Custom</a></li>
 
               </ul>
             </li>
@@ -50,7 +51,7 @@
     </div>
   </div>
 </nav>
-  
+
     {% block content %}
     	
     {% endblock %}
